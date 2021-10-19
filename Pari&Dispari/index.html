@@ -11,12 +11,13 @@
     <header>
         <h1>PARI O DISPARI?</h1>
     </header>
+    <!-- /header -->
 
     <main>
 
         <div class="even_odd">
 
-            <label for="user_choice">
+            <label for="form_group user_choice">
                 Pari o Dispari?
             </label>
 
@@ -26,8 +27,9 @@
             </select>
             
         </div>
+        <!-- /even_odd -->
 
-        <div class="number">
+        <div class="form_group number">
             
             <label for="user_number">
                 Scrivi un numero tra 1 e 5
@@ -42,14 +44,24 @@
                 <option value="5">5</option>
 
             </select>
+
+            <p>Numero per PC <span id="pc_number"></span> </p>
             
         </div>
+        <!-- number -->
 
-        <button id="play">PLAY</button>
+        <div class="game_round">
 
-        <p class="winner"></p>
+            <button id="play">PLAY</button>
+
+            <p class="winner"></p>
+
+        </div>
+        <!-- /round -->
+        
 
     </main>
+    <!-- /main -->
 
 
 
