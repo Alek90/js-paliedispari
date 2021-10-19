@@ -41,3 +41,15 @@ const y = 5
 
 let risultato = pariDispari(x, pc_number)
 console.log(risultato);
+
+
+
+// Variabili DOM
+
+let user_number = Number(document.getElementById("user_number").value);
+// console.log(user_number);
+
+
+// Servirà qualcosa che dà il via? Magari un bottone da premere dopo aver selezionato le scelte...
+// Azione
+
