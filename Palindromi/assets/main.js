@@ -26,18 +26,25 @@ let user_word = prompt ("Scrivi una parola").toLowerCase();
 */
 
 /* 
-    Oppure...utilizzando un ciclo for, e assegnando in maniera adeguata la variabile index, il termine del cicloed il codice da seguire...
+    Oppure...utilizzando un ciclo for, e assegnando in maniera adeguata la variabile index, il termine del ciclo ed il codice da seguire...
 
     let revers_word = "";
-    for (i = user_word.length - 1; i >= 0; i--) {
+    for (let i = user_word.length - 1; i >= 0; i--) {
     reverse_word += user_word[i];
     }
     
     Questo sulla base del fatto che la stringa viene interpretata come un array di caratteri.
+    
+    Strumenti:
+    -for()
+    -if()
 */
 
 
 //  TEST VIA CICLO FOR
+
+
+/** */
 
 function palindromeTest(word){
 
