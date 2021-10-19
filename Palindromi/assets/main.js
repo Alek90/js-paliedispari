@@ -7,8 +7,8 @@
 // Chiedere all'utente di inserire una parola.
 // Strumenti: - prompt
 
-const user_word = prompt ("Scrivi una parola");
-console.log(user_word);
+let user_word = prompt ("Scrivi una parola").toLowerCase();
+// console.log(user_word);
  
 
 // Creare una funzione per stabilire se la parola proposta sia palindroma o no.
@@ -29,13 +29,42 @@ console.log(user_word);
     Oppure...utilizzando un ciclo for, e assegnando in maniera adeguata la variabile index, il termine del cicloed il codice da seguire...
 
     let revers_word = "";
-    for (i = user_word.length - 1; i > 0; i--) {
+    for (i = user_word.length - 1; i >= 0; i--) {
     reverse_word += user_word[i];
     }
     
     Questo sulla base del fatto che la stringa viene interpretata come un array di caratteri.
 */
 
+
+//  TEST VIA CICLO FOR
+
+function palindromeTest(word){
+
+    let reverse_word = "";
+    let message = "";
+
+    for (let i = word.length - 1; i >= 0; i--) {
+
+        reverse_word += word[i];
+    }
+    console.log(reverse_word);
+
+    if (reverse_word == user_word){
+        console.log("Palindrome");
+        message = "Palindrome";
+    }else {
+        console.log("Not Palindrome");
+        message = "Not Palindrome"
+    }
+    console.log(reverse_word);
+
+    return message
+
+}
+
+
+palindromeTest(user_word);
 
 
 
