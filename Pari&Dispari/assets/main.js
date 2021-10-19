@@ -9,6 +9,7 @@
 
 // Funzioni
 
+/** Generatore numero random tra 1 e 5. */
 function randomNumber () {
 
     let random_number = Math.floor(Math.random() * 5) + 1;
@@ -16,6 +17,9 @@ function randomNumber () {
     return random_number
 }
 
+/** Funzione che riconosce e dichiara se un numero sia pari o dispari.
+ * @param {number} numero - il numero da esaminare.
+ */
 function pariDispari (numero) {
     const moduloPari = 0;
     let result = "";
@@ -46,10 +50,10 @@ play.addEventListener("click", function() {
 
     let pc_number = randomNumber ();
 
-    let sommaNumeri = user_number + pc_number;
+    let sumNumber = user_number + pc_number;
 
-    sumResult = pariDispari(sommaNumeri);
-    console.log(user_number, user_choice, pc_number, sommaNumeri, sumResult);
+    sumResult = pariDispari(sumNumber);
+    console.log(user_number, user_choice, pc_number, sumNumber, sumResult);
 
     if(user_choice == sumResult){
         message = "You Win"
