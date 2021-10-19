@@ -18,14 +18,13 @@ function randomNumber () {
 
 function pariDispari (numero) {
     const moduloPari = 0;
-    const moduloDispari = 1;
     let result = "";
 
     if (numero % 2 == moduloPari) {
         result = "pari";
         return result
     }else {
-        result = "Dispari";
+        result = "dispari";
         return result
     }
 }
@@ -41,7 +40,8 @@ play.addEventListener("click", function() {
 
     const userNumberChoice = document.getElementById("user_number");
     const user_number = parseInt(userNumberChoice.value);
-    
+    let user_choice = document.getElementById("user_choice").value;
+    let message = 0;
 
 
     let pc_number = randomNumber ();
@@ -49,8 +49,15 @@ play.addEventListener("click", function() {
     let sommaNumeri = user_number + pc_number;
 
     sumResult = pariDispari(sommaNumeri);
-    console.log(user_number, pc_number, sommaNumeri, sumResult);
+    console.log(user_number, user_choice, pc_number, sommaNumeri, sumResult);
 
+    if(user_choice == sumResult){
+        message = "You Win"
+    }else {
+        message = "PC Win"
+    }
 
+    document.querySelector(".winner").innerHTML = message;
+    console.log(message);
 
 })
