@@ -6,3 +6,16 @@
     Stabilire se la somma sia pari o dispari, tramite una funzione.
     Dichiarare il vincitore.
 */
+
+// Funzioni
+
+function randomNumber () {
+
+    let random_number = Math.floor(Math.random() * 5) + 1;
+
+    return random_number
+}
+
+
+let pc_number = randomNumber ()
+console.log(pc_number);
