@@ -16,27 +16,6 @@ function randomNumber () {
     return random_number
 }
 
-
-/* let pc_number = randomNumber ()
-console.log(pc_number); */
-
-
-// Variabili
-
-/* et user_number = Number(document.getElementById("user_number").value);
-console.log(user_number);
-
-
-
-let sommaNumeri = user_number + pc_number;
-console.log(sommaNumeri);
-
-let sumResult = ""; */
-
-
-// Servirà qualcosa che dà il via? Magari un bottone da premere dopo aver selezionato le scelte...
-// Azione
-
 function pariDispari (numero) {
     const moduloPari = 0;
     const moduloDispari = 1;
@@ -52,17 +31,17 @@ function pariDispari (numero) {
 }
 
 
-
-
+// Servirà qualcosa che dà il via? Magari un bottone da premere dopo aver selezionato le scelte...
 
 const play = document.getElementById("play");
 
+// Azione
 
 play.addEventListener("click", function() {
 
     const userNumberChoice = document.getElementById("user_number");
-
     const user_number = parseInt(userNumberChoice.value);
+    
 
 
     let pc_number = randomNumber ();
@@ -71,5 +50,7 @@ play.addEventListener("click", function() {
 
     sumResult = pariDispari(sommaNumeri);
     console.log(user_number, pc_number, sommaNumeri, sumResult);
+
+
 
 })
