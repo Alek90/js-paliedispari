@@ -21,7 +21,7 @@ let pc_number = randomNumber ()
 console.log(pc_number);
 
 
-// Funzione basata sulla concezione che num pari + num dispari darà risultato dispari, mentre la somma tra 2 num pari o 2 num dispari darà risultato pari.
+/* // Funzione basata sulla concezione che num pari + num dispari darà risultato dispari, mentre la somma tra 2 num pari o 2 num dispari darà risultato pari.
 function pariDispari (x, y) {
     let modulo1 = x % 2;
     let modulo2 = y % 2;
@@ -34,22 +34,41 @@ function pariDispari (x, y) {
         result = "Pari";
         return result;
     };
-}
-
-const x = 4
-const y = 5
-
-let risultato = pariDispari(x, pc_number)
-console.log(risultato);
+} */
 
 
 
-// Variabili DOM
+
+
+
+// Variabili
 
 let user_number = Number(document.getElementById("user_number").value);
-// console.log(user_number);
+console.log(user_number);
+
+let sommaNumeri = user_number + pc_number
+console.log(sommaNumeri);
+
+let sumResult = "";
 
 
 // Servirà qualcosa che dà il via? Magari un bottone da premere dopo aver selezionato le scelte...
 // Azione
 
+function pariDispari (numero) {
+    const moduloPari = 0;
+    const moduloDispari = 1;
+    let result = "";
+
+    if (numero % 2 == moduloPari) {
+        result = "pari";
+        return result
+    }else {
+        result = "Dispari";
+        return result
+    }
+}
+
+
+sumResult = pariDispari(sommaNumeri);
+console.log(sumResult);
