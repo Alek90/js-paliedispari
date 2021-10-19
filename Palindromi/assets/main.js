@@ -4,13 +4,6 @@
 */
 
 
-// Chiedere all'utente di inserire una parola.
-// Strumenti: - prompt
-
-let user_word = prompt ("Scrivi una parola").toLowerCase();
-// console.log(user_word);
- 
-
 // Creare una funzione per stabilire se la parola proposta sia palindroma o no.
 /* Strumenti: 
     - function (); per creare la funzione;
@@ -44,8 +37,9 @@ let user_word = prompt ("Scrivi una parola").toLowerCase();
 //  TEST VIA CICLO FOR
 
 
-/** */
-
+/** Funzione che verifica se una parola è palindroma, e rende messaggio con risultato.
+ * @param {string} word - la parola da verificare.
+ */
 function palindromeTest(word){
 
     let reverse_word = "";
@@ -71,5 +65,11 @@ function palindromeTest(word){
 }
 
 
-let test = palindromeTest(user_word);
-document.getElementById("message").innerHTML = test;
+// Chiedere all'utente di inserire una parola;
+let user_word = prompt ("Scrivi una parola").toLowerCase();
+
+// utilizzare funzione apposita per verificare se la parola dell'utente sia palindroma;
+let verify = palindromeTest(user_word);
+
+// stampare risultato in html.
+document.getElementById("message").innerHTML = verify;
