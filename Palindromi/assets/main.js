@@ -60,6 +60,8 @@ function palindromeTest(word){
     if (reverse_word == user_word){
         console.log("Palindrome");
         message = "Palindrome";
+        console.log(message);
+
     }else {
         console.log("Not Palindrome");
         message = "Not Palindrome"
@@ -72,6 +74,3 @@ function palindromeTest(word){
 
 
 palindromeTest(user_word);
-
-
-
