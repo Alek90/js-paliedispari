@@ -60,17 +60,16 @@ function palindromeTest(word){
     if (reverse_word == user_word){
         console.log("Palindrome");
         message = "Palindrome";
-        console.log(message);
-
+        return message
+        
     }else {
         console.log("Not Palindrome");
         message = "Not Palindrome"
+        return message 
     }
-    console.log(reverse_word);
-
-    return message
 
 }
 
 
-palindromeTest(user_word);
+let test = palindromeTest(user_word);
+document.getElementById("message").innerHTML = test;
